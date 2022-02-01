@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Emplyee Registration</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <script type="text/javascript" src="../js/form.js"></script>
 </head>
 <body>
-    
+    <header class="header-content header">
+        <div class="logo-content" href="#">
+            <img src="../assert/images/aadressbookimage.png" alt="Logo">
+            <div>
+                <span class="emp-text">ADDRESS</span><br>
+                <span class="emp-text emp-payroll">BOOK</span>
+            </div>
+        </div>
+        
+
+    </header>
+    <div class="div-form">
+    <form class="form" action="#" onreset="resetForm()" onsubmit="save(); return false">
+        <div class="form-head">
+            PERSON ADDRESS BOOK
+        </div>
+        <div class="form-input">
+            <label class="label text">Full Name</label>
+            <input class="input name" type="text" id="personName" name="name" >
+            <label class="label text">Address</label>
+            <textarea class="input address" type="text" id="address" name="address" >
+            </textarea>
+            <label class="label text">Phone Number</label>
+            <input class="input phone" type="text" id="phone" name="phone" >
+
+            <select id="state" name="state" onchange="ChangeCityList()"> State
+                <option value="select"> Select State</option>
+                <option value="Maharashtra"> Maharashtra</option>
+
+            </select>
+                <select id="city" name="city">City
+                <option value=""> Selct City</option>
+                <option value="Amravati">Amravati</option>
+                <option value="Aurangabad">Aurangabad</option>
+                <option value="Hubli-Dharwad">Hubli-Dharwad</option>
+                <option value="Kalyan">Kalyan</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Pimpri Chinchwad">Pimpri Chinchwad</option>
+                <option value="Pune">Pune</option>
+                <option value="Solapur">Solapur</option>
+                <option value="Thane">Thane</option>
+            </select>
+            <input class="zip" type="text" id="zip" name="zip" placeholder="Zip" >
+
+            <div class="submit-reset">
+                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                <button type="reset" class="resetButton button">Reset</button>
+            </div>
+            
+        </div>
+        </form>
+    </div>
 </body>
 </html>
