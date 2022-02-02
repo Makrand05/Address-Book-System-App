@@ -8,6 +8,7 @@
     <title>Emplyee Registration</title>
     <link rel="stylesheet" href="../css/form.css">
     <script type="text/javascript" src="../js/form.js"></script>
+    <script type="text/javascript" src="../js/AddressBookClass.js"></script>
 </head>
 <body>
     <header class="header-content header">
@@ -18,24 +19,27 @@
                 <span class="emp-text emp-payroll">BOOK</span>
             </div>
         </div>
-        
-
     </header>
     <div class="div-form">
     <form class="form" action="#" onreset="resetForm()" onsubmit="save(); return false">
         <div class="form-head">
+            <div class="close"><a href="../pages/homePage.html" class="closex">X</a></div>
             PERSON ADDRESS BOOK
+            
         </div>
         <div class="form-input">
             <label class="label text">Full Name</label>
-            <input class="input name" type="text" id="personName" name="name" >
+            <input class="input name" type="text" id="name" name="name" >
+            <error-output class="text-error" for="text"></error-output>
+
+
             <label class="label text">Address</label>
             <textarea class="input address" type="text" id="address" name="address" >
             </textarea>
             <label class="label text">Phone Number</label>
             <input class="input phone" type="text" id="phone" name="phone" >
 
-            <select id="state" name="state" onchange="ChangeCityList()"> State
+            <select id="state" name="state">
                 <option value="select"> Select State</option>
                 <option value="Maharashtra"> Maharashtra</option>
 
@@ -56,8 +60,8 @@
             <input class="zip" type="text" id="zip" name="zip" placeholder="Zip" >
 
             <div class="submit-reset">
-                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                 <button type="reset" class="resetButton button">Reset</button>
+                <button type="submit" class="button submitButton" id="submitButton">Add</button>
             </div>
             
         </div>
